@@ -7,6 +7,7 @@ ALTER TABLE stock ADD CONSTRAINT unique_stock_fkey UNIQUE (s_w_id,s_i_id);
 ALTER TABLE oorder ADD CONSTRAINT unique_oorder_fkey UNIQUE (o_w_id,o_d_id,o_id);
 ALTER TABLE new_order ADD CONSTRAINT unique_new_order_fkey UNIQUE (no_w_id,no_d_id,no_o_id);
 ALTER TABLE order_line ADD CONSTRAINT unique_order_line_fkey UNIQUE (ol_w_id,ol_d_id,ol_o_id,ol_number);
+ALTER TABLE item ADD CONSTRAINT unique_item_fkey UNIQUE (i_id);
 
 ALTER TABLE DISTRICT ADD CONSTRAINT D_FKEY_W FOREIGN KEY (D_W_ID) REFERENCES WAREHOUSE(W_ID) NOT VALID;
 ALTER TABLE CUSTOMER ADD CONSTRAINT C_FKEY_D FOREIGN KEY (C_W_ID, C_D_ID) REFERENCES DISTRICT (D_W_ID, D_ID) NOT VALID;
