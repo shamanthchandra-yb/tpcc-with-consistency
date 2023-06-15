@@ -9,8 +9,7 @@ o_carrier_id int DEFAULT NULL,
 o_ol_cnt decimal(2,0),
 o_all_local decimal(1,0),
 o_entry_d bigint,
-"__dbz__physicalTableIdentifier" text,
-PRIMARY KEY (o_w_id,o_d_id,o_id,"__dbz__physicalTableIdentifier")
+PRIMARY KEY (o_w_id,o_d_id,o_id)
 );
 
 CREATE TABLE DISTRICT (
@@ -25,8 +24,7 @@ d_street_2 varchar(20),
 d_city varchar(20),
 d_state char(2),
 d_zip char(9),
-"__dbz__physicalTableIdentifier" text,
-PRIMARY KEY (d_w_id,d_id,"__dbz__physicalTableIdentifier")
+PRIMARY KEY (d_w_id,d_id)
 );
 
 CREATE TABLE ITEM (
@@ -35,8 +33,7 @@ i_name varchar(24),
 i_price decimal(5,2),
 i_data varchar(50),
 i_im_id int,
-"__dbz__physicalTableIdentifier" text,
-PRIMARY KEY (i_id,"__dbz__physicalTableIdentifier")
+PRIMARY KEY (i_id)
 );
 
 CREATE TABLE WAREHOUSE (
@@ -49,8 +46,7 @@ w_street_2 varchar(20),
 w_city varchar(20),
 w_state char(2),
 w_zip char(9),
-"__dbz__physicalTableIdentifier" text,
-PRIMARY KEY (w_id,"__dbz__physicalTableIdentifier")
+PRIMARY KEY (w_id)
 );
 
 CREATE TABLE CUSTOMER (
@@ -75,8 +71,7 @@ c_phone char(16),
 c_since bigint,
 c_middle char(2),
 c_data varchar(500),
-"__dbz__physicalTableIdentifier" text,
-PRIMARY KEY (c_w_id,c_d_id,c_id,"__dbz__physicalTableIdentifier")
+PRIMARY KEY (c_w_id,c_d_id,c_id)
 );
 
 CREATE TABLE ORDER_LINE (
@@ -90,16 +85,14 @@ ol_amount decimal(6,2),
 ol_supply_w_id int,
 ol_quantity decimal(2,0),
 ol_dist_info char(24),
-"__dbz__physicalTableIdentifier" text,
-PRIMARY KEY (ol_w_id,ol_d_id,ol_o_id,ol_number,"__dbz__physicalTableIdentifier")
+PRIMARY KEY (ol_w_id,ol_d_id,ol_o_id,ol_number)
 );
 
 CREATE TABLE NEW_ORDER (
 no_w_id int,
 no_d_id int,
 no_o_id int,
-"__dbz__physicalTableIdentifier" text,
-PRIMARY KEY (no_w_id,no_d_id,no_o_id,"__dbz__physicalTableIdentifier")
+PRIMARY KEY (no_w_id,no_d_id,no_o_id)
 );
 
 CREATE TABLE STOCK (
@@ -120,8 +113,7 @@ s_dist_07 char(24),
 s_dist_08 char(24),
 s_dist_09 char(24),
 s_dist_10 char(24),
-"__dbz__physicalTableIdentifier" text,
-PRIMARY KEY (s_w_id,s_i_id,"__dbz__physicalTableIdentifier")
+PRIMARY KEY (s_w_id,s_i_id)
 );
 
 CREATE TABLE HISTORY (
